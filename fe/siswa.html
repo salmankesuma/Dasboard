@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sekolah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css/sekolah.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand" href="#">Dashboard Sekolah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Sekolah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="siswa.html">Siswa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="guru.html">Guru</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h3 class="text-center mb-3">Cari Sekolah</h3>
+
+        <!-- Dropdown dan Search -->
+        <div class="row">
+            <!-- Input Pencarian Sekolah -->
+            <div class="col-md-10 offset-md-1">
+                <div class="input-group">
+                    <input class="form-control" id="searchInput" type="text" placeholder="Cari sekolah..." onkeyup="searchSchools()">
+                    <button class="btn btn-primary" type="button" onclick="searchSchools()">Cari</button>
+                </div>
+                <!-- Hasil pencarian akan muncul di bawah input -->
+                <div id="searchResult" class="mt-2"></div>
+            </div>
+        </div>
+
+        <h4 id="schoolName" class="text-center mt-4"></h4>
+
+    <section>
+        <div class="chart-container mb-5">
+        <!-- <div class="container mt-5"> -->
+            <h2>Rata-Rata Nilai Per Kelas</h2>
+    
+            <!-- Loading indicator -->
+            <div id="chartLoading">Loading chart...</div>
+    
+            <!-- Canvas untuk Chart.js -->
+            <canvas id="barChart"></canvas>
+        </div>
+        
+    </section>
+
+    <section>
+        <!-- Tabel Sekolah -->
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>No</th>
+                    <th>Nama Siswa</th>
+                    <th>Kelas</th>
+                    <th>Alamat</th>
+                    <th>Action</th> 
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <tr>
+                    <td colspan="4" class="text-center">Memuat data...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Hidden field untuk menyimpan ID sekolah yang dipilih -->
+        <input type="hidden" id="selectedSchoolId">
+    </div>
+</section>
+
+    <script src="./js/siswa.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #d50c0c;
+    color: white;
+    padding: 1rem 0; /* Optional: to give navbar more space vertically */
+}
+
+.navbar .container-fluid {
+    justify-content: center; /* Center navbar content */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Align the nav items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; /* Add spacing between navbar items */
+    margin-right: 15px;
+}

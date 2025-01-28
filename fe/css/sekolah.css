@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #d50c0c;
+    color: white;
+    padding: 1rem 0; /* Optional: to give navbar more space vertically */
+}
+
+.navbar .container-fluid {
+    justify-content: center; /* Center navbar content */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Align the nav items horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; /* Add spacing between navbar items */
+    margin-right: 15px;
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+.dropdown-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.stat-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    min-width: 150px;
+}
+
+#schoolStats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
